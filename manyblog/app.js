@@ -10,7 +10,9 @@ app.engine('html', require('express-art-template'))
 
 
 app.get('/', function(req, res) {
-    res.send('hello')
+    res.render("index.html", {
+
+    })
 
 })
 

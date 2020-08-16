@@ -2,19 +2,25 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>{{block 'title'}}默认标题{{/block}}</title>
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
-  {{block 'head'}}{{/block}}
+    <meta charset="UTF-8">
+    <title>{{block 'title'}}默认标题{{/block}}</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css"> {{block 'head'}}{{/block}}
 </head>
 
 <body>
-  {{include '../_partials/header.html'}}
-  {{block 'body'}}{{/block}}
-  {{include '../_partials/footer.html'}}
-  <script src="/node_modules/jquery/dist/jquery.js"></script>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-  {{block 'script'}}{{/block}}
+    <!-- 头部 -->
+    {{include '../_partials/header.html'}}
+    <!-- 填坑内容 -->
+    {{block 'body'}} {{/block}}
+    <!-- 尾部 -->
+    {{include '../_partials/footer.html'}}
+    <!-- js -->
+    <!-- jq -->
+    <script src="../../node_modules//jquery/dist/jquery.js"></script>
+    <!-- bootstrap -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    {{block 'script'}}{{/block}}
 </body>
 
 </html>
