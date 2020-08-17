@@ -28,12 +28,13 @@ app.use(bodyParser.json())
 app.use(session({
         // 配置加密字符串，它会在原有加密基础之上和这个字符串拼起来去加密
         // 目的是为了增加安全性，防止客户端恶意伪造
-        secret: "iscast",
+        secret: "manyblog",
         resave: false,
         saveUninitialized: false // 无论你是否使用 Session ，我都默认直接给你分配一把钥匙
     }))
     //挂载
-    // app.use(router)
+    // 没什么没有进行导包却可以在router.js使用session，中间件的功能
+app.use(router)
 app.listen(8080, function() {
     console.log('running~~~');
 })

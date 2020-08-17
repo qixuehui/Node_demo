@@ -1,11 +1,11 @@
 define( [
 	"../core",
-	"../core/isAttached",
-	"./var/rboxStyle",
 	"./var/rnumnonpx",
+	"./var/rmargin",
 	"./var/getStyles",
-	"./support"
-], function( jQuery, isAttached, rboxStyle, rnumnonpx, getStyles, support ) {
+	"./support",
+	"../selector" // Get jQuery.contains
+], function( jQuery, rnumnonpx, rmargin, getStyles, support ) {
 
 "use strict";
 
@@ -26,7 +26,7 @@ function curCSS( elem, name, computed ) {
 	if ( computed ) {
 		ret = computed.getPropertyValue( name ) || computed[ name ];
 
-		if ( ret === "" && !isAttached( elem ) ) {
+		if ( ret === "" && !jQuery.contains( elem.ownerDocument, elem ) ) {
 			ret = jQuery.style( elem, name );
 		}
 
@@ -35,7 +35,7 @@ function curCSS( elem, name, computed ) {
 		// but width seems to be reliably pixels.
 		// This is against the CSSOM draft spec:
 		// https://drafts.csswg.org/cssom/#resolved-values
-		if ( !support.pixelBoxStyles() && rnumnonpx.test( ret ) && rboxStyle.test( name ) ) {
+		if ( !support.pixelMarginRight() && rnumnonpx.test( ret ) && rmargin.test( name ) ) {
 
 			// Remember the original values
 			width = style.width;
