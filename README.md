@@ -1,6 +1,4 @@
 # NodeJs
-<<<<<<< HEAD
-=======
 
 # feedback
 ##界面
