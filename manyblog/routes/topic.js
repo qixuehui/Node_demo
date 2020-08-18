@@ -1,6 +1,7 @@
 var express = require('express')
 var user = require('../models/user')
 var Topics = require('../models/topic')
+var Comment = require('../models/commet')
 const { json } = require('body-parser')
     // var User = require('../models/user')
 
@@ -19,12 +20,10 @@ router.post('/topics/new', async function(req, res) {
     body["email"] = req.session.user.email
     body["nickname"] = req.session.user.nickname
     try {
-        await new Topics(body).save((data) => {
-            console.log(data);
-        })
-        res.status(200).json({
+        await new Topics(body).save()
+        return res.status(200).json({
             err_code: 200,
-            message: 'Internal error.'
+            message: 'save ok'
         })
     } catch (e) {
         return res.status(500).json({
@@ -35,7 +34,30 @@ router.post('/topics/new', async function(req, res) {
 })
 
 //浏览博客
-router.get('/topics/show', function(req, res) {
+router.get('/topics/show', async function(req, res) {
+    // 有可能会有\"转义符，排除掉它
+    var id = req.query.id.replace(/\"/g, "")
+    console.log(req.query.id);
+    console.log('------------');
+    // cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true }
+    // console.log(req.session);
+    try {
+        var data = await Topics.findOne({ _id: id })
+        var comments = await Comment.findOne({ articleId: id })
+            // console.log(data._doc);
+            // console.log(comments);
+        res.render("topics/show.html", {
+            topics: data._doc,
+            comments: comments,
+            // undefined 但是我们的目的是为了获取其为true而已
+            user: req.session.user
+        })
+    } catch (e) {
+        // post
+        throw e
+    }
+})
+router.post('/topics/show', function(req, res) {
     res.render("topics/show.html", {
         user: req.session.user
     })

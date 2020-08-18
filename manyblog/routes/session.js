@@ -73,10 +73,8 @@ router.get('/register', function(req, res) {
 
 
 router.get('/logout', function(req, res) {
-    // 清除登陆状态
     req.session.user = null
-
-    // 重定向到登录页
+        // 重定向到登录页
     res.redirect('/login')
 })
 
@@ -102,7 +100,8 @@ router.post('/register', async function(req, res) {
 
             // 创建用户，执行注册
             await new User(body).save()
-
+                // 注册成功，使用 Session 记录用户的登陆状态
+            req.session.user = user
             res.status(200).json({
                 err_code: 0,
                 message: 'OK'

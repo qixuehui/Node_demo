@@ -11,10 +11,9 @@ const topicSchema = new Schema({
         required: true
     },
     model: {
-        type: Number,
-        enum: [0, 1, 2, 3],
+        type: String,
+        default: '分享',
         required: true
-            //0--分享 1--问答 2--招聘 3--客户端测试
     },
     title: {
         type: String,

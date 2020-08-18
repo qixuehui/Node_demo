@@ -6,15 +6,16 @@
                 <div class="form-group">
                     <label for="">选择板块</label>
                     <select class="form-control" name="model">
-            <option value="0">分享</option>
-            <option value="1">问答</option>
-            <option value="2">招聘</option>
-            <option value="3">客户端测试</option>
+            <option value="分享">分享</option>
+            <option value="问答">问答</option>
+            <option value="招聘">招聘</option>
+            <option value="生活">生活</option>
+            <option value="情感">情感</option>
           </select>
                 </div>
                 <div class="form-group">
                     <label for="">标题</label>
-                    <input type="text" class="form-control" name="title">
+                    <input type="text" class="form-control" name="title" id='title'>
                 </div>
                 <div class="form-group">
                     <label for="">内容</label>
@@ -28,11 +29,13 @@
 {{/block}} {{block 'script'}}
 <script>
     $('#new_form').on('submit', function(e) {
+        //阻止默认事件
         e.preventDefault()
-            // if ($('input').val() === '' || $('textarea').val() === '') {
-            //     window.alert('还没有输入标题或内容！')
-            //     return false
-            // }
+            // .serialize() 方法创建以标准 URL 编码表示的文本字符串。它的操作对象是代表表单元素集合的 jQuery 对象。
+        if ($('#title').val() === '' || $('textarea').val() === '') {
+            window.alert('还没有输入标题或内容！')
+            return false
+        }
         var formData = $(this).serialize()
         $.ajax({
             url: '/topics/new',
@@ -41,7 +44,7 @@
             dataType: 'json',
             success: function(data) {
                 var err_code = data.err_code
-                if (err_code === 0) {
+                if (err_code === 200) {
                     window.location.href = '/'
                 } else if (err_code === 500) {
                     window.alert('服务器忙，请稍后重试！')
