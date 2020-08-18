@@ -7,6 +7,7 @@ var db = require('./db')
 var Schema = mongoose.Schema
     //设计模型
 var commentSchema = new Schema({
+    //文章id
     articleId: {
         type: String,
         required: true
@@ -19,6 +20,7 @@ var commentSchema = new Schema({
         type: String,
         required: true
     },
+    //评论
     comments: {
         type: String,
         required: true

@@ -10,7 +10,6 @@
     <div class="row">
         <div class="col-md-9">
             <!-- 不需要循环就不写循环 -->
-
             <article class="markdown-body">
                 <h6 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>分类</h6>
                 <p>{{topics.model}}类型文章</p>
@@ -23,32 +22,65 @@
                 <p>作者：{{topics.nickname}}</p>
                 <p>创建时间：{{topics.created_time}}</p>
             </article>
-
-            {{each comments}}
+            {{if comments[0] }} {{each comments item}}
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <span>lipengzhou</span> commented
-                    <span>24 minutes ago</span>
+                    <span>{{item.nickname}}</span> commented
+                    <span>{{item.created_time}}</span>
                     <span class="action">
             <a href=""><i class="glyphicon glyphicon-thumbs-up pull-right"></i></a>
-            <a href=""><i class="glyphicon glyphicon-remove-circle pull-right"></i></a>
+            <!-- <a href=""><i class="glyphicon glyphicon-remove-circle pull-right"></i></a> -->
             <a href=""><i class="glyphicon glyphicon-remove-circle pull-right"></i></a>
           </span>
                 </div>
                 <div class="panel-body">
-                    评论测试
+                    {{item.comments}}
                 </div>
             </div>
             </span>
-            {{/each}}
-            <form>
+            {{/each}} {{ else }}
+            <p>还没有评论，快来抢占沙发吧！</p>
+            {{/if}}
+            <form id='comments_form'>
                 <div class="form-group">
                     <label for="exampleInputPassword1">添加回复</label>
-                    <textarea class="form-control" name="" id="" cols="10" rows="10"></textarea>
+                    <textarea class="form-control" name="Retextarea" id="Retextarea" cols="10" rows="10"></textarea>
                 </div>
-                <button type="submit" class="btn btn-success">回复</button>
+                <button type="submit" class="btn btn-success" id="btn">回复</button>
             </form>
         </div>
     </div>
 </section>
+{{/block}} {{block 'script'}}
+<script>
+    $('#comments_form').on('submit', e => {
+        e.preventDefault()
+            //获取序列号数值
+        var formData = $("#comments_form").serialize()
+            // [Object: null prototype] {
+            //   Retextarea: 'ddd',
+            //   articleId: '"5f3b3089f6a95450a03b61c2"'
+            // }
+
+        if ($("#Retextarea").val() === "") {
+            window.alert("你没有回复内容哦,请重新输入内容")
+            return false
+        }
+        const id = $(this)[0].location.search.slice(4).replace(/\"/g, "")
+        $.ajax({
+            url: "/topics/show",
+            type: "post",
+            data: formData + "&articleId=" + id,
+            dataType: 'json',
+            success: function(data) {
+                var err_code = data.err_code
+                if (err_code === 200) {
+                    window.location.href = '/topics/show?id=' + id
+                } else if (err_code === 500) {
+                    window.alert('服务器忙，请稍后重试！')
+                }
+            }
+        })
+    })
+</script>
 {{/block}}
