@@ -44,12 +44,9 @@
             </style> -->
             <ul class="nav navbar-nav navbar-right">
                 {{ if user }}
-                <a href="#">
-                    <img width="20" height="20" class="media-object" style="position:relative ; top: 35px; right: 25px;" src="../public/img/avatart.png" alt="...">
-                </a>
                 <a class="btn btn-default navbar-btn" href="/topics/new">发起</a>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img width="20" height="20" src="../public/img/avatar-max-img.png" alt=""> <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img width="20" height="20" src="../public/img/avatart.png" alt=""> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-current-user">
                             当前登录用户: {{ user.nickname }}
