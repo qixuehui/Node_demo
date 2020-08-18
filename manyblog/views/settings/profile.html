@@ -9,7 +9,7 @@
         <form id="profile_form">
             <div class="form-group">
                 <label for="exampleInputEmail1">账号</label>
-                <p class="form-control-static" name="email"> {{user.email}}</p>
+                <p class="form-control-static" name="email" id="exampleInputEmail1"> {{user.email}}</p>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">昵称</label>
@@ -57,9 +57,9 @@
 </section>
 {{/block}} {{block 'script'}}
 <script>
-    $('#profile_form').on('submit', e => {
-        e.preventDefault()
-    })
+    // $('#profile_form').on('submit', e => {
+    //     e.preventDefault()
+    // })
 </script>
 
 {{/block}}

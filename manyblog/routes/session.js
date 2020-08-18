@@ -103,7 +103,7 @@ router.post('/register', async function(req, res) {
                 // 注册成功，使用 Session 记录用户的登陆状态
             req.session.user = user
             res.status(200).json({
-                err_code: 0,
+                err_code: 200,
                 message: 'OK'
             })
         } catch (err) {
