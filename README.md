@@ -13,3 +13,6 @@
 ![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/3.png)
 
 # manyblog
+打开方式：在控制台输入：node app.js
+不需要下载依赖包，我直接讲依赖包打包了
+
