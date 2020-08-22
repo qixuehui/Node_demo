@@ -13,6 +13,15 @@
 ![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/3.png)
 
 # manyblog
+##界面
+![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/1.png)
+
+##发表评论
+
+![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/2.png)
+##回退
+
+![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/3.png)
 打开方式：在控制台输入：node app.js
 不需要下载依赖包，我直接讲依赖包打包了
 
