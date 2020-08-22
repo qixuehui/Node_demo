@@ -11,7 +11,7 @@
 ##回退
 
 ![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/3.png)
-
+##--------------------------------------------------------------------------------------------------------------##
 # manyblog
 ##首页
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/1.png)
@@ -24,13 +24,15 @@
 
 ##发表文章
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/textr.png)
+
 发表成功
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/textsuccess.png)
+
 文章查看
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/texthf.png)
+
 ##个人信息修改
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/proson.png)
-![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/3.png)
 
 注意要运行它，你需要node环境
 打开方式：在控制台输入：
