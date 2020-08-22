@@ -13,15 +13,27 @@
 ![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/3.png)
 
 # manyblog
-##界面
-![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/1.png)
+##首页
+![login](https://github.com/qixuehui/Node_demo/blob/master/img/1.png)
 
-##发表评论
+##用户注册和登录
+注册：
+![login](https://github.com/qixuehui/Node_demo/blob/master/img/login.png)
+登录：
+![login](https://github.com/qixuehui/Node_demo/blob/master/img/rlogin.png)
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/2.png)
-##回退
-
+##发表文章
+![login](https://github.com/qixuehui/Node_demo/blob/master/img/textr.png)
+发表成功
+![login](https://github.com/qixuehui/Node_demo/blob/master/img/textsuccess.png)
+文章查看
+![login](https://github.com/qixuehui/Node_demo/blob/master/img/texthf.png)
+##个人信息修改
+![login](https://github.com/qixuehui/Node_demo/blob/master/img/proson.png)
 ![login](https://github.com/qixuehui/Node_demo/blob/master/feedback/public/img/3.png)
-打开方式：在控制台输入：node app.js
-不需要下载依赖包，我直接讲依赖包打包了
+
+注意要运行它，你需要node环境
+打开方式：在控制台输入：
+1：npm install
+2：node app.js
 
