@@ -17,21 +17,22 @@
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/1.png)
 
 ##用户注册和登录
-注册：
+
+注册页面：
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/login.png)
-登录：
+登录页面：
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/rlogin.png)
 
-##发表文章
+##发表文章页面
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/textr.png)
 
-发表成功
+发表成功页面
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/textsuccess.png)
 
-文章查看
+文章查看页面
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/texthf.png)
 
-##个人信息修改
+##个人信息修改页面
 ![login](https://github.com/qixuehui/Node_demo/blob/master/img/proson.png)
 
 注意要运行它，你需要node环境
