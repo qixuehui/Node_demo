@@ -1,6 +1,4 @@
 # NodeJs
-#### 不知道什么原因有时候可以显示图片，有时候不可以显示
-如果不可以，就只能直接下载项目查看img下的图片
 <br/>
 # feedback
 <br/>
@@ -33,7 +31,7 @@
 
 <br/>
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/img/1.png)
+![login](https://i.loli.net/2020/09/21/K6BFvZ1h7oCk5dS.png)
 
 <br/>
 ##用户注册和登录
@@ -41,37 +39,37 @@
 注册页面：
 <br/>
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/img/login.png)
+![login](https://i.loli.net/2020/09/21/6DElXnWcjrdkoVx.png)
 
 <br/>
 登录页面
 <br/>
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/img/rlogin.png)
+![login](https://i.loli.net/2020/09/21/O3CPvaF5VBIMqgy.png)
 
 <br/>
 ##发表文章页面
 <br/>
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/img/textr.png)
+![login](https://i.loli.net/2020/09/21/L2vHh5CG8eTFUYm.png)
 
 <br/>
 发表成功页面
 <br/>
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/img/textsuccess.png)
+![login](https://i.loli.net/2020/09/21/QAWIwdxcq8H6SVj.png)
 
 <br/>
 文章查看页面
 <br/>
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/img/texthf.png)
+![login](https://i.loli.net/2020/09/21/QAWIwdxcq8H6SVj.png)
 
 <br/>
 ##个人信息修改页面
 <br/>
 
-![login](https://github.com/qixuehui/Node_demo/blob/master/img/proson.png)
+![login](https://i.loli.net/2020/09/21/fVREhmox5BPeapb.png)
 <br/>
 注意要运行它，你需要node环境
 打开方式：在控制台输入：
