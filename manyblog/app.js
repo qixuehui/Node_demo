@@ -7,7 +7,7 @@ var router = require('./router')
 var app = express()
     //公开资源
 app.use('/public/', express.static(path.join(__dirname, './public/')))
-app.use('/node_modules', express.static(path.join(__dirname, './node_modules/')))
+app.use('/node_modules/', express.static(path.join(__dirname, './node_modules/')))
     //中间件
 app.engine('html', require('express-art-template'))
     //如果想设定views的路径，其实path.join()里面的路径可以直接path.join(__dirname,'views')会自动合成完整路径
